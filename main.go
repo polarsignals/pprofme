@@ -40,7 +40,7 @@ var cli struct {
 }
 
 func main() {
-	ctx := kong.Parse(&cli)
+	ctx := kong.Parse(&cli, kong.UsageOnError())
 	// Call the Run() method of the selected parsed command.
 	err := ctx.Run(&Context{
 		Server: cli.Server,
