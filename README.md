@@ -9,8 +9,10 @@ Upload [pprof](https://github.com/google/pprof) formatted profiles with ease fro
 curl -LO https://github.com/polarsignals/pprofme/releases/latest/download/pprofme_$(uname)_$(uname -m)
 # Verify the checksum
 curl -sL https://github.com/polarsignals/pprofme/releases/latest/download/pprofme_checksums.txt | shasum --ignore-missing -a 256 --check
+# Make the binary executable
+chmod a+x pprofme_$(uname)_$(uname -m)
 # Move to path
-sudo mv pprofme_$(uname)_$(uname -m) /usr/local/bin
+sudo mv pprofme_$(uname)_$(uname -m) /usr/local/bin/pprofme
 ```
 
 ## Usage
