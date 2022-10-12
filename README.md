@@ -5,10 +5,12 @@ Upload [pprof](https://github.com/google/pprof) formatted profiles with ease fro
 ## Install
 
 ```
-curl -LO https://github.com/polarsignals/pprofme/releases/latest/download/pprofme-$(uname)-$(uname -m)
-curl -LO https://github.com/polarsignals/pprofme/releases/latest/download/pprofme_checksums.txt
-echo "$(cat pprofme_checksums.txt) pprofme" | shasum -a 256 --check
-sudo mv 
+# Download binary for your OS and architecture
+curl -LO https://github.com/polarsignals/pprofme/releases/latest/download/pprofme_$(uname)_$(uname -m)
+# Verify the checksum
+curl -sL https://github.com/polarsignals/pprofme/releases/latest/download/pprofme_checksums.txt | shasum --ignore-missing -a 256 --check
+# Move to path
+sudo mv pprofme_$(uname)_$(uname -m) /usr/local/bin
 ```
 
 ## Usage
