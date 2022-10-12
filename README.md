@@ -20,7 +20,7 @@ sudo mv pprofme_$(uname)_$(uname -m) /usr/local/bin/pprofme
 Run the `pprofme upload` with a path to a pprof profile, enter a description and the sharing link will be printed to your terminal and it will be opened in your default browser.
 
 ```
-$ pprofme upload -d="Fibonacci in Go" ~/pprof/pprof.pprof-example-app-go.samples.cpu.001.pb.gz
+$ pprofme upload -d="Fibonacci in Go" ./fibonacci.pb.gz
 https://pprof.me/779de8f
 ```
 
