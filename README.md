@@ -10,7 +10,7 @@ curl -LO https://github.com/polarsignals/pprofme/releases/latest/download/pprofm
 # Verify the checksum
 curl -sL https://github.com/polarsignals/pprofme/releases/latest/download/pprofme_checksums.txt | shasum --ignore-missing -a 256 --check
 # Move to path
-sudo mv pprofme_$(uname)_$(uname -m) /usr/local/bin
+sudo mv pprofme_$(uname)_$(uname -m) /usr/local/bin/pprofme
 ```
 
 ## Usage
